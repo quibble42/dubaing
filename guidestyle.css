@@ -1,0 +1,219 @@
+/*Styles go here*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Ek+Mukta|Libre+Baskerville|Montserrat|Taviraj');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import "compass/css3";
+
+
+body{
+    font-family: 'Muli', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f3f3f3;
+    overflow-x:hidden;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Varela Round', sans-serif;
+
+    
+}
+h1, h3{
+    color:#d6ab22;
+}
+h3{
+    margin-top:60px;
+}
+
+a{
+    font-family: inherit;
+}
+
+.atry{
+    font-size: 0.8em;
+}
+
+#unless{
+    text-align: center;
+
+}
+
+h1{
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+    padding:35px;
+    text-align: center;
+}
+p{
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+h4{
+    text-align: center;
+}
+.leftalignplease{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom:20px; 
+    text-align:left; 
+}
+#dubaiguide, #makingmemories{
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+
+
+/*Derivative of MIT lisenced code below (references "hovicon"). See https://codepen.io/honglio/pen/FKyxG?editors=1100 for the original post, or https://codepen.io/quibble/pen/eEXYeK?editors=1100 for the derivative.*/
+.hovicon {
+    font-family: 'Varela Round', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    font-weight:700;
+    line-height: 90px;
+    cursor: pointer;
+    margin: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+}
+
+.hovicon:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content:'';
+}
+
+ .hovicon.effect-1 {
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -o-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+.hovicon.effect-1:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    -webkit-box-shadow: 0 0 0 4.4px black;
+            box-shadow: 0 0 0 4.4px black;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    -o-transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+/* Effect 1a */
+ .hovicon.effect-1.sub-a:hover {
+    background: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.hovicon.effect-1.sub-a:hover:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.gupiccy {
+    width:100vw;
+    height:auto;
+    position:relative;
+    left:50%;
+    right:50%;
+    margin-left: -50vw;
+    margin-right:-50vw;
+    vertical-align: bottom;
+}
+
+.dubaingscoretext{
+    display:block;
+    color:#d6ab22;
+    font-weight: 700;
+    font-size:1.2em;
+    margin-top:10px;
+    margin-bottom:14px;
+}
+.dubaingscoretextinline{
+    display:inline-block;
+    color:#d6ab22;
+    font-weight: 700;
+    font-size:1.2em;
+
+}
+.dubaingscoretextinline2{
+    display:inline-block;
+    color:#d6ab22;
+    font-weight: 700;
+    font-size:1em;
+
+    white-space:normal;
+}
+.dubaingscorescore, .blufy{
+    color:#00abe9;
+}
+.blackfy{
+    color:rgb(10,10,10);
+}
+.navify{
+    color:#000044;
+}
+#themeparks{
+    color:#d6ab22;
+}
+
+.gupicstoppy{
+    max-height:300px;
+    overflow:hidden;
+}
+
+.gupicstoppy2{
+
+    max-height:auto;
+    overflow:hidden;
+}
+
+.moveover{
+    right:30px;
+}
+
+.yellify{
+    color:#d6ab22;
+}

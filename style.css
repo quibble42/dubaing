@@ -1,0 +1,1759 @@
+/*Styles go Here*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Ek+Mukta|Libre+Baskerville|Montserrat|Taviraj');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+*{-webkit-box-sizing: border-box;box-sizing: border-box;}
+.grid{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100vh  minmax(220px, 27vh) minmax( 575px, 73vh) auto 92vh 29vh;
+}
+body{
+	margin-top:0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow-x:hidden;
+
+}
+.grid div{
+	width:100%;
+  	border:0px solid rgb(0,95,107);
+ 	border-radius:0px;
+ 	background-color:rgba(0, 0, 0, 0);
+/*  	padding:0.2em;*/
+  	color:#000;
+  	font-size:120%;
+  	outline-width: 0px;
+}
+a{
+	color:inherit;
+	text-decoration:inherit;
+}
+a:hover{
+	color:inherit;
+	text-decoration: inherit;
+}
+a:focus{
+	color:inherit;
+	text-decoration: inherit;
+}
+#overheader{
+	margin:0 auto;
+	width:100%;
+	display: grid;
+	grid-template-rows: 65px 445px;
+	background-image: url('pics/redsky.jpg');
+	background-image: url('pics/resortpic.jpg');
+	background-image: url('pics/duballoons.jpg');
+	background-attachment: local; 
+	background-position: center;
+  	/* Saturation filter (previous three lines of code) is from Amelia Bellamy-Royds from Codepen. MIT licensed. https://codepen.io/AmeliaBR/pen/xGuBr */
+	background-size: cover;
+	border: 0px;
+	-webkit-animation: backgroundFaderer 25s linear infinite 0s;
+	        animation: backgroundFaderer 25s linear infinite 0s;
+
+}
+@-webkit-keyframes backgroundFaderer{
+
+	0% 		{background-image: url('pics/redsky.jpg'); background-size: cover; background-position: center;}
+	6.6% 	{background-image: url('pics/redsky.jpg'); background-size: cover; background-position: center;}
+	26.7% 	{background-image: url('pics/redsky.jpg'); background-size: cover; background-position: center;}
+	33.3%	{background-image: url('pics/resortpic.jpg'); background-size: cover; background-position: center;}
+	39.9% 	{background-image: url('pics/resortpic.jpg'); background-size: cover; background-position: center;}
+	60%		{background-image: url('pics/resortpic.jpg'); background-size: cover; background-position: center;}
+	66.6% 	{background-image: url('pics/duballoons.jpg'); background-size: cover; background-position: center;}
+	73.3%	{background-image: url('pics/duballoons.jpg'); background-size: cover; background-position: center;}
+	93.3%	{background-image: url('pics/duballoons.jpg'); background-size: cover; background-position: center;}
+	100% 	{background-image: url('pics/redsky.jpg'); background-size: cover; background-position: center;}
+	
+}
+
+
+
+/*MODAL CSS*/
+.toppopup {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.4);
+	font-family: 'Varela Round', sans-serif;
+	padding:0;
+	background-clip:padding-box;
+	border:none;
+	-webkit-animation: coverblackup 0.15s linear;
+	z-index: 5;
+}
+.toppopup:focus{
+	outline:none;
+	border:none;
+	background-clip:padding-box;
+}
+.signuppopupheader{
+	padding: 2px 16px;
+    line-height: 4.2vw;
+
+    font-size: 3vw;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 300;
+    color: #aaa;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    background: #f7f7f7;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor:default;
+}
+@media screen and (min-width: 1030px) {
+	.signuppopupheader{
+		font-size:30px;
+		line-height:40px;
+
+	}
+}
+
+.signuppopupheader::before{
+	content: '';
+  	position: absolute;
+	top: -5px;
+	left: 0px;
+	right: 0px;
+	height: 8px;
+	border-radius: 5px 5px 0 0;
+	background-color:#00B253;
+	/*Thanks to Thibaut at codepen for the basis of the ::before code right here. MIT lisenced. See https://codepen.io/Thibaut/pen/jGJAi?page=2*/
+}
+.signuppopupmiddle{
+
+	border:none;
+}
+.signuppopupfooter{
+	padding: 2px 16px;
+	background-color: #00B253;
+	color: white;
+
+}
+.signuppopupmiddle::after{
+	content:'';
+	position:absolute;
+	bottom:-5%;
+	left:0px;
+	right:0px;
+	height:5%;
+	background:#00B253;
+	border-radius: 0 0 5px 5px;
+}
+.signpopup{
+	position: fixed;
+	background-color: #fefefe;
+	margin: 20vh 17% 20% 23%;
+	padding: 0px;
+	width: 55%;
+	height:49vh;
+	-webkit-box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2),0 3px 20px 0 rgba(0,0,0,0.2);
+	        box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2),0 3px 20px 0 rgba(0,0,0,0.2);
+	-webkit-animation: dothepopup 0.63s ease-out;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+
+}
+@-webkit-keyframes dothepopup{
+	from {top: -550px; opacity:0}
+	to {top:0; opacity:1}
+
+}
+.close{
+	position:absolute;
+	top:3px;
+	right:10px;
+	font-family: 'Varela Round', sans-serif;
+	font-size:3vmax;
+	color: gray;
+	font-weight:bold;
+}
+.close:hover, .close:focus{
+	color:black;
+	text-decoration:none;
+	cursor:pointer;
+}
+.preventscroll{
+	position: fixed;
+	overflow-y:scroll;
+}
+
+
+	/*internal modal*/
+#carriercase{
+	position:relative;
+	min-width: 0px;
+	width:100%;
+	height:100%;
+	background-color:white;
+
+
+}
+.signupinputs{
+	background-color: white;
+	
+}
+.signupinp[type=email]{
+	grid-area:signupinp;
+	font-size: 1em;
+	font-family: 'Varela Round', sans-serif;
+	color:#00B253;
+	border:0px;
+	width: 27vw;
+
+	max-width:350px;
+	height:5.4vh;
+	max-height: 70px;
+	border: 1.5px solid rgb(20, 170, 20);
+	cursor:text;
+	margin:26px 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	padding: 13px 8px 13px 8px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+
+	text-align: center;
+}
+.signupinp::-webkit-input-placeholder{
+	color:rgba(0,0,0,0.6);
+	text-align: center;
+	text-shadow: 0.4px 0.4px rgba(30,30,30,0.1);
+	font-family: 'Varela Round', sans-serif;
+}
+.signupinp:-ms-input-placeholder{
+	color:rgba(0,0,0,0.6);
+	text-align: center;
+	text-shadow: 0.4px 0.4px rgba(30,30,30,0.1);
+	font-family: 'Varela Round', sans-serif;
+}
+.signupinp::placeholder{
+	color:rgba(0,0,0,0.6);
+	text-align: center;
+	text-shadow: 0.4px 0.4px rgba(30,30,30,0.1);
+	font-family: 'Varela Round', sans-serif;
+}
+.signupinp[type=email]:focus{
+	outline:none;
+	border: 1.5px solid rgb(0, 171, 233);
+}
+
+
+
+
+
+.modicons{
+	width:20%;
+	border-radius:50%;
+	cursor:pointer;
+}
+
+.toures{
+
+}
+.alphabet > input { /* HIDE RADIO */
+  border: 0;
+    clip: rect(0 0 0 0);
+    height: 10px;
+    margin: 0 -10px -10px 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 10px;
+    opacity: 0.001;
+
+}
+.alphabet > label {
+	cursor:pointer;
+	clear:both;
+	left:50%;
+}
+.alphabet > input + label + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2.6px solid transparent;
+}
+.alphabet > input:checked + label + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2.6px solid #f00;
+}
+
+/*Derivative of MIT lisenced code below (only that which references "hovicon"). See https://codepen.io/honglio/pen/FKyxG?editors=1100 for the original post, or https://codepen.io/quibble/pen/eEXYeK?editors=1100 for the derivative.*/
+.iconsform{
+	position:absolute;
+}
+.hovicon {	
+	position:absolute;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+ .hovicon.effect-2 {
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -o-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+.hovicon.effect-2:after {
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    -o-transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+/* Effect 1a */
+ .hovicon.effect-2.sub-a:hover {
+    background: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.hovicon.effect-2.sub-a:hover:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+#purseicon{										/*    PURSE ICON     */
+	grid-area:purseicon;
+	position: absolute;
+	top:43px;
+	left:15.6vw;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+}
+#homeicon{										/*    HOME ICON     */
+	position:absolute;
+	top:43px;
+	left:38.4vw;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+}
+#touradio{
+	width:60px;
+	position:absolute;
+	top:73px;
+	left:15.6vw;
+	-webkit-transform:translateX(-120px);
+	    -ms-transform:translateX(-120px);
+	        transform:translateX(-120px);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+}
+#resradio{
+	width:60px;
+	top:73px;
+	left:38.4vw;
+	position:absolute;
+	-webkit-transform:translateX(50px);
+	    -ms-transform:translateX(50px);
+	        transform:translateX(50px);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+}
+#saveyourspotbutton{
+	font-family: "Varela Round", sans-serif;
+	position: fixed;
+	grid-area:saveyourspotbutton;
+	border-spacing: 10px;
+	border-color:rgb(20, 170, 20);
+	border-width: 2.3px;
+	border-radius:5px;
+	background-color:white;
+	padding:10px;
+	top:43vh;
+	left:27vw;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	cursor:pointer;
+	-webkit-transition:.2s;
+	-o-transition:.2s;
+	transition:.2s;
+	width: 160px;
+	overflow: hidden;
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+	text-shadow: 0.4px 0.4px rgba(30,30,30,0.1);
+	z-index: 5;
+}	
+
+#spansave, #spanlets{
+	display:block;
+	overflow:hidden;
+	-webkit-transition:opacity 0.15s ease-in-out;
+	-o-transition:opacity 0.15s ease-in-out;
+	transition:opacity 0.15s ease-in-out;
+}
+#saveyourspotbutton:hover{background:#02d363;}
+#saveyourspotbutton:focus{outline:none;}
+#spansave{
+	height:auto;
+	width:auto;
+	opacity: 1;
+}
+#spanlets{
+	height:0;
+	width:0;
+	opacity:0;
+}
+#saveyourspotbutton:hover #spansave{
+	height:0;
+	width:0;
+	opacity:0;
+}
+#saveyourspotbutton:hover #spanlets{
+	height:auto;
+	width:auto;
+	opacity:1;
+}
+
+
+#carriercaseforicons{
+	position:relative;
+}
+
+#areyoua{
+	clear:both;
+	grid-area:areyoua;
+	position:absolute;
+	margin: 0 50%;
+	height:auto;
+	width:auto;
+	text-align:center;
+	color:#00B253;
+/*	user-select:none;*/
+	cursor:default;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+}
+#areyoua span{
+	display:block;
+		right:10em;
+
+}
+#ora{
+	position:absolute;
+	grid-area:ora;
+	left:26.8vw;
+	top:75px;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	user-drag:none;
+	cursor:default;
+}
+
+
+
+
+
+							/*END MODAL CSS*/
+
+
+
+
+
+
+
+
+
+#header{
+
+	display:grid;
+	grid-template-columns: 15% 60% 13.5% 0% 11%;
+	grid-template-rows: 5.2vh;
+	grid-template-areas:
+	"logo . contact . aboutus";
+	background-color: rgba(0, 0, 0, 0);
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	border:0px;
+	max-height:100%; }
+.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    /*Shadowed class from Dudley Storey at stack overflow. See link in html. MIT licensed with exceptions. */
+}
+
+
+#header button {
+	float:right;
+	margin:0;
+	outline:none;
+	background-color:#FFB154;
+	border:none;
+	font-family: 'Varela Round', sans-serif;
+	font-weight: 500;
+	font-size:16.5px;
+	max-font-size:1.45vmax;
+	min-height:25px;
+	border-bottom:1.2px solid black;
+	border-left:1.2px solid black;
+	border-top:1.2px solid black;
+}
+#headerlogo{
+	grid-area: logo;
+	-webkit-filter: drop-shadow(0 0 3px #000000);
+	        filter: drop-shadow(0 0 3px #000000);
+	user-select:none;
+	margin-left: 1.5vw;
+	margin-top:1.8vh;
+	background-image: fill;
+	user-drag:none;
+	-moz-user-select:none;
+	-webkit-user-drag:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	min-height: 50px;
+}
+
+
+
+
+
+
+
+
+#ContactB{
+	grid-area: contact; 
+	text-align: center; 
+	padding-right:0px;
+	border-radius: 9px 0 0 9px;
+	-webkit-transition: color .09s, .2s;
+	-o-transition: color .09s, .2s;
+	transition: color .09s, .2s;
+
+}
+
+#ContactB:hover{
+	background-color:#00B253;
+	font-weight: 400;
+
+}
+#ContactB:focus{
+	color:rgb(0,90,0);		
+}
+
+#cowboy{
+	-webkit-user-select:all;
+	   -moz-user-select:all;
+	    -ms-user-select:all;
+	        user-select:all;
+}
+#cowboy ul{
+	position:absolute;
+	visibility:hidden;
+	opacity:0;
+	background-color:#FFA132;
+	border-radius: 3px;
+	float:left;
+	width:auto;
+	height:auto;
+	padding: 5px;
+	margin-top: 6px;
+	right:0px;
+	border: 1.2px solid black;
+	-webkit-transition: visibility 0s, opacity 0.1s linear;
+	-o-transition: visibility 0s, opacity 0.1s linear;
+	transition: visibility 0s, opacity 0.1s linear;
+
+}
+#cowboy ul li{
+	float:left;
+
+}
+#ContactB:focus ul{
+	visibility: visible;
+	opacity:1;
+}
+#ContactB ul:hover{
+	visibility: visible;
+	opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+#AboutUsB{
+	grid-area: aboutus; 
+	text-align: center;
+	width:105%; 
+	-webkit-transition: color .09s, .2s; 
+	-o-transition: color .09s, .2s; 
+	transition: color .09s, .2s;
+ }
+ #AboutUsB:hover{
+ 	background-color:#00B253;
+ }
+ #AboutUsB:focus{
+ 	color:rgb(0,90,0);
+ }
+
+.headerbutton{
+	position: relative;
+	vertical-align: center;
+	height: 60%;
+	margin: 0 auto;
+	top:66%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	cursor:pointer;
+}
+#blackboxthing{
+
+}
+/*Font sizing for header buttons' fonts below (media queries)*/
+@media screen and (max-width: 1000px){
+	.headerbutton{
+		font-size:30px;
+	}
+}
+@media screen and (max-width: 999px) and (min-width: 600px) {
+	.headerbutton{
+		font-size: 23px;
+		font-size:1.35vw;
+	}
+}
+@media screen and (max-width: 599px) {
+	.headerbutton{
+		font-size: 17px;
+		font-size:1.50vw;
+	}
+}
+
+
+#imacowboy{
+  font-family: 'Varela Round', sans-serif;
+  font-size:14px;
+  letter-spacing:0.3px;
+  margin-top:6px;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  user-drag:none;
+  width:100%;
+  height:60px;
+  background-color:rgba(60, 60, 60, .9);
+  color:#fcc626;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index:2;
+}
+#imacowboy > ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align:center;
+  vertical-align:center;
+  white-space:nowrap;
+}
+#imacowboy > ul > li{
+  display:inline-block;
+  tabindex:0;
+  padding: 14px 16px 16px 16px;
+  margin-left: 5px;
+  margin-right:5px;
+  margin-top:8px;
+  margin-bottom:8px;
+  cursor:default;
+}
+#imacowboy > ul > li >span{
+  -webkit-transition: background-color .4s, border .5s,padding .3s;
+  -o-transition: background-color .4s, border .5s,padding .3s;
+  transition: background-color .4s, border .5s,padding .3s;
+  cursor:pointer;
+  border-radius:4px;
+  border: 0px solid gray;
+  
+}
+  
+#imacowboy > ul > li:hover >span{
+  padding: 12.7px 12.7px;
+  background-color:#222;
+  cursor:pointer;
+  
+}
+#imacowboy > ul > li:focus >span{
+  padding: 12.7px 12.7px;
+  background-color:#222;
+  cursor:pointer;
+}
+#imacowboy > ul > li:focus{
+	outline:none;	
+}
+
+#imacowboy > ul > li:focus >ul{
+	visibility:visible;
+	opacity: 1;
+}
+
+
+.innercowboy {
+	position:absolute;
+	background-color:rgba(60, 60, 60, 0.9);
+	border-bottom-left-radius: 3.5px;
+	border-bottom-right-radius: 3.5px;
+	text-align:left;
+	width:auto;
+	margin-top: 22px;
+	margin-left: -2px;
+	padding:0;
+	/*transform:translate(-160px, 50px);*/
+	z-index: 2;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+	min-width: 100px;
+
+}
+
+.innercowboy > li{
+	display: block;
+	margin:7px 0px;
+	padding:7px;
+	-webkit-transition:0.2s ease;
+	-o-transition:0.2s ease;
+	transition:0.2s ease;
+
+}
+.innercowboy > li:hover{
+	background-color:rgba(30, 30, 30, 0.9);
+	margin:7px 0px;
+	padding:7px;
+
+}
+.innercowboy > li{
+	cursor:pointer;
+	color:white;
+	opacity:.98;
+}
+
+.innercowboy a{
+	opacity: 0.94;
+}
+
+.pipe{
+  margin:0;
+  padding:auto;
+
+  -webkit-user-select:none;
+
+     -moz-user-select:none;
+
+      -ms-user-select:none;
+
+          user-select:none;
+  cursor:default;
+  pointer-events:none;
+}
+
+.pipe:hover{
+  background:none;
+  cursor:default;
+}
+
+
+@media screen and (max-width:1094px){
+  
+	.pipe{
+		position:absolute;
+		clear:both;
+		visibility: hidden;
+		display:none;
+	}
+	/*#imacowboy ul{
+		white-space:normal;
+	}*/
+
+}
+@media screen and (max-width:850px){
+	#imacowboy{
+	  	height:112px;
+	}
+	#imacowboy ul li{
+		padding: 14px 16px 16px 16px;
+		margin-left: 5px;
+		margin-right:5px;
+		margin-top:8px;
+		margin-bottom:8px;
+		margin-bottom:auto;
+		border-radius:4px;
+	}
+	#imacowboy ul{
+		white-space: normal;
+	}
+	.pipe{
+		position:absolute;
+		display:none;
+	}
+}
+@media screen and (max-width:500px){
+  #imacowboy{opacity:0;}
+}
+@media screen and (max-width:465px){
+  #imacowboy{display:none;}
+}
+
+#touristbasicsli, #jobsli{	color:white;  }
+#familynadventureli, #hotelsncuisineli{  color:#00abe9;  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#signupmain{   /*This is the container for the signupbutton and main title*/
+	width:100%;
+	position:absolute;
+	top:26vh;
+	left:50%;
+	right:50%;
+	padding:0.2vmax;
+	background-color:none;
+}
+h1{
+	font-family: "Varela Round", sans-serif;
+	color:#FFCB60;
+	font-size:6.3vmax;
+	font-weight:400;
+	white-space: nowrap;
+	text-align: center;
+	width:auto;
+	line-height: auto;
+}
+#turkey{
+	-webkit-transform:translate(-50.3%,-50%);
+	    -ms-transform:translate(-50.3%,-50%);
+	        transform:translate(-50.3%,-50%);
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	cursor: default;
+	text-shadow: 0px 5px 10px black;
+
+}
+
+#SignupButton{
+-webkit-transform:translate(-49%,-50%);
+    -ms-transform:translate(-49%,-50%);
+        transform:translate(-49%,-50%);
+	font-family: 'Varela Round', sans-serif;
+	font-size:20px;
+	font-weight: 600;
+	color: #301209;
+	text-decoration: none;
+	border: solid #222;
+	border-radius: 9px;
+	max-width: 190px;
+	-webkit-appearance:none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	cursor:pointer;
+	background-color:#e6e8ed;
+	width:22%;
+	height:80%;
+	-webkit-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+#SignupButton:hover{
+	background-color:#00b253;
+}
+#SignupButton:focus{
+	outline:none;
+	background-color:#bbb;
+}
+#learnmorebutton{
+	display:block;
+	width: 20%;
+	position: absolute;
+	top:90.5vh;
+	left:50%;
+	right:50%;
+	-webkit-transform: translateX(-48.5%);
+	    -ms-transform: translateX(-48.5%);
+	        transform: translateX(-48.5%);
+	padding:0.2vmax;
+	font-family: 'Varela Round', sans-serif;
+	font-size:20px;
+	font-weight: 400;
+	color: #FFB154;
+	text-decoration: none;
+	border: none;
+	max-width: 190px;
+	-webkit-appearance:none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	cursor:pointer;
+	background:none;
+	text-shadow: 0px 0px 6px #03334D, 0px 0px 6px #000000, 0px 0px 6px #000000;
+	-webkit-transition: color .15s;
+	-o-transition: color .15s;
+	transition: color .15s;
+}
+
+#learnmorebutton:hover{
+
+	color:#edd376;
+}
+#learnmorebutton:focus{
+	outline:none;
+}
+.yellowize{
+	color:yellow;
+	text-shadow: 2px 2px black;
+}
+#guidemore{
+	position:absolute;
+	display:none;
+}
+#guidebutton{
+	width: 20vh;
+	position: fixed;
+	transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	top:40vh;
+	left:85vw;
+	font-family: 'Varela Round', sans-serif;
+	font-size:20px;
+	font-weight: 400;
+	color: #FFB154;
+	text-decoration: none;
+	border: none;
+	max-width: 190px;
+	-webkit-appearance:none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	cursor:pointer;
+	background:none;
+	text-shadow: 0px 0px 6px #03334D, 0px 0px 6px #000000, 0px 0px 6px #000000;
+	-webkit-transition: color .15s, .2s;
+	-o-transition: color .15s, .2s;
+	transition: color .15s, .2s;
+	z-index: 1;
+
+}
+
+#guidebutton:hover{
+	color:#edd376;
+}
+#guidebutton:focus{
+	outline:none;
+}
+@media screen  and (max-width: 923px){
+	#guidebutton{
+		left:80.5vw;
+	}
+}
+@media screen and (max-width:1057px) and (min-width: 924px){
+	#guidebutton{
+		left:83vw;
+	}
+}
+@media screen and (max-width:1213px) and (min-width: 1058px){
+	#guidebutton{
+		left:87vw;
+	}
+}
+@media screen and (max-width:1461px) and (min-width: 1214px){
+	#guidebutton{
+		left:88.5vw;
+	}
+}
+@media screen  and (min-width: 1462px){
+	#guidebutton{
+		left:89vw;
+
+	}
+}
+
+
+
+					/*Another modal?? You thought I wouldn't, but I did.*/
+
+.sidepopup {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.4);
+	font-family: 'Varela Round', sans-serif;
+	padding:0;
+	background-clip:padding-box;
+	border:none;
+	-webkit-animation: coverblackup 0.19s linear;
+	-webkit-transition-duration: 0.2s;
+	     -o-transition-duration: 0.2s;
+	        transition-duration: 0.2s;
+	z-index: 5;
+}
+@-webkit-keyframes coverblackup{
+	from {opacity:0}
+	to {opacity:1}
+}
+.sidepopup:focus{
+	outline:none;
+	border:none;
+	background-clip:padding-box;
+}
+.guidepop{
+	position: fixed;
+	background-color: #fefefe;
+	padding:0px;
+	width: 20%;
+	height:auto;
+	top:15%;
+	right:-0%;
+	-webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.2),0 0 25px 0 rgba(0,0,0,0.2), 0 0 25px 0 rgba(0,0,0,0.1);
+	        box-shadow: 0 0 25px 0 rgba(0,0,0,0.2),0 0 25px 0 rgba(0,0,0,0.2), 0 0 25px 0 rgba(0,0,0,0.1);
+	-webkit-animation: dotheguidepopup 0.63s ease;
+
+	-webkit-transition-duration:0.2s;
+
+	     -o-transition-duration:0.2s;
+
+	        transition-duration:0.2s;
+}
+
+.guidepopupheader{
+	padding: 10% 10% 20% 10%;
+	margin-left:0px;
+    line-height: auto;
+    font-size: 2.4vmax;
+    height:3.6vmax;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    color: #111;
+    text-align: left;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    background: #f7f7f7;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor:default;
+}
+@media screen and (min-width: 1109px) and (max-width: 1360px) {
+	.guidepopupheader{
+		font-size: 26px;
+	}
+}
+@media screen and (min-width: 1361px) and (max-width: 1689px){
+	.guidepopupheader{
+		font-size: 1.98vmax;
+	}
+}
+@media screen and (min-width: 1690px){
+	.guidepopupheader{
+		font-size: 31px;
+	}
+}
+
+.guidepopupheader::before{
+	content: '';
+  	position: absolute;
+	top: -5px;
+	left: 0px;
+	right: 0px;
+	height: 8px;
+	border-radius: 5px 5px 0 0;
+	background-color:#00B253;
+	/*Thanks to Thibaut at codepen for the basis of the ::before code right here. MIT lisenced. See https://codepen.io/Thibaut/pen/jGJAi?page=2*/
+}
+.guidepopupmiddle{
+	padding:0;
+	padding-right:4px;
+	/*margin-left: 10px;*/
+	border:none;
+	font-size: 19px;
+	line-height: 35px;
+	overflow:auto;
+	overflow-y:hidden;
+}
+.guidepopupmiddle li{
+	/*cursor:pointer;*/
+}
+.guidepopupmiddle li:hover{
+	color:#FFA131;
+	cursor:pointer;
+}
+#guidetext:hover{
+	color:#FFA131;
+	cursor:pointer;
+}
+.guidepopupmiddle::after{
+	content:'';
+	position:absolute;
+	bottom:-5%;
+	left:0px;
+	right:0px;
+	height:5%;
+	background:#00B253;
+	border-radius: 0 0 5px 5px;
+}
+@media screen and (max-width: 807px){
+	.guidepop{
+		width: 25%;
+		top:23vh;
+	}
+}
+@media screen and (min-width: 808px) and (max-width: 1108px){
+	.guidepop{
+		
+		top:22vh;
+	}
+}
+@media screen and (min-width: 1109px) and (max-width: 1360px) {
+	.guidepopupmiddle{
+		font-size: 22px;
+		line-height: 40px;
+	}
+	.guidepop{
+		top:22vh;
+	}
+}
+@media screen and (min-width: 1361px) and (max-width: 1689px){
+	.guidepopupmiddle{
+		font-size: 24px;
+		line-height: 448px;
+	}
+	.guidepop{
+		top:23vh;
+	}
+}
+@media screen and (min-width: 1690px){
+	.guidepopupmiddle{
+		font-size: 26px;
+		line-height: 59px;
+	}
+	.guidepop{
+		top:15vh;
+		width:15%;
+	}
+}
+/*.guidepopupheader{
+	width:200px;
+	height:200px;
+	background-color: red;
+	margin:0 auto;
+	top:50%;
+	transition-duration:2s;
+}*/
+.guideclose{
+	position:absolute;
+	top:2px;
+	right:10px;
+	font-family: 'Varela Round', sans-serif;
+	font-size:2.7vmax;
+	color: gray;
+	font-weight:bold;
+}
+.guideclose:hover, .guideclose:focus{
+	color:black;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+@-webkit-keyframes dotheguidepopup{
+	from {right: -550px; opacity:0}
+	to {right:0px; opacity:1}
+}
+@-webkit-keyframes dotheguidepopdown{
+	from {right: 0px; opacity:1}
+	to {right:-550px; opacity:0}
+
+}
+/*Modal Styling*/
+#guidetabsbig{
+	list-style-type:circle;
+}
+/*End modal styling*/
+
+					/*Ok no more modals for real this time*/
+
+							
+
+
+							/*END of first page (first 100vh) code*/
+
+
+
+#quotebox{
+	display: grid;
+	background-color:rgb(18, 18, 18);
+	grid-template-columns:15% 73% 12%;
+
+	grid-template-areas:
+	". quoteboxy .";
+}
+#midquote{
+	grid-area:quoteboxy;
+	background-color:rgb(0, 0, 0, 0);
+	color: rgb( 216, 208, 208);
+	border: 0px;
+	text-align:center;
+	font-size: 1.4em;
+	font-family: 'Crimson Text', serif;
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	cursor:default;
+	margin: auto;
+	z-index:2;
+
+}
+
+#paragraphs {
+	display:grid;
+	grid-template-columns:7% 3.12% 8.24% 2% 25.98% 3.16% 3.12% 8.24% 2% 25.98% 3.16% 7%;
+	grid-template-rows:7% 8% 5% 4% 1% 11% 5% 5% 4% 1% 11% 5% 5% 4% 1% 11% 5% 7%; 
+	grid-template-areas:  
+		". . . . . . . . . . . ."
+		". great great great great great great great great great great ."
+		". . . . . . . . . . . ."
+		". . gicon1 . ghead1 . .	gicon2 . ghead2 . ."
+		". . gicon1 . gbody1 . .  		gicon2 . gbody2 . ."
+		". . .		. gbody1 . .	. 	   . gbody2 . ."
+		". . . . . . . . . . . ."
+		". . . . . . . . . . . ."
+		". . gicon3 . ghead3 . .	gicon4 . ghead4 . ."
+		". . gicon3 . gbody3 . .    gicon4 . gbody4 . ."
+		". . .		. gbody3 . .	. 	   . gbody4 . ."
+		". . . . . . . . . . . ."
+		". . . . . . . . . . . ."
+		". . gicon5 . ghead5 . .	gicon6 . ghead6 . ."
+		". . gicon5 . gbody5 . .    gicon6 . gbody6 . ."
+		". . .		. gbody5 . .	. 	   . gbody6 . ."
+		". . . . . . . . . . . ."
+		". . . . . . . . . . . .";
+		min-width: 0px;
+		background-color: rgb(255,249,251);
+		background-attachment: fixed;
+
+
+}
+
+
+
+#paragraphs > *{
+	margin:0 auto;
+	min-width: 100%;
+	font-family: 'Muli', sans-serif;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	cursor:default;
+}
+#paragraphs > great{
+	grid-area: great;
+	text-align: center;
+}
+#greatbox{
+	margin: 0 auto;
+	margin-left: 0.1em;
+	font-family: 'Crimson Text', serif;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#paragraphs > gicon1 {
+	grid-area:gicon1;
+}
+#paragraphs > ghead1{
+	grid-area:ghead1;
+	font-weight: bold;
+}
+#paragraphs > gbody1{
+	grid-area: gbody1;
+
+}
+#paragraphs > gicon2 {
+	grid-area:gicon2;
+}
+#paragraphs > ghead2{
+	grid-area:ghead2;
+	font-weight: bold;
+
+}
+#paragraphs > gbody2{
+	grid-area: gbody2;
+
+}
+#paragraphs > gicon3 {
+	grid-area:gicon3;
+}
+#paragraphs > ghead3{
+	grid-area:ghead3;
+	font-weight: bold;
+}
+#paragraphs > gbody3{
+	grid-area: gbody3;
+
+
+}
+#paragraphs > gicon4 {
+	grid-area:gicon4;
+}
+#paragraphs > ghead4{
+	grid-area:ghead4;
+	font-weight: bold;
+}
+#paragraphs > gbody4{
+	grid-area: gbody4;
+
+
+}
+#paragraphs > gicon5 {
+	grid-area:gicon5;
+}
+#paragraphs > ghead5{
+	grid-area:ghead5;
+	font-weight: bold;
+}
+#paragraphs > gbody5{
+	grid-area: gbody5;
+
+}
+#paragraphs > gicon6 {
+	grid-area:gicon6;
+}
+#paragraphs > ghead6{
+	grid-area:ghead6;
+	font-weight: bold;
+}
+#paragraphs > gbody6{
+	grid-area: gbody6;
+
+}
+.pnggroup{
+	height: auto;
+	float:right;
+}
+.gbodyy{
+	font-size: 0.9em;
+	margin:0 auto;
+}
+.gheader{ font-size: 1em;}
+
+@media all and (min-width: 1701px){
+	.pnggroup{
+		max-width: 90px;
+		clear:both;
+	}
+	#paragraphs{
+		grid-template-columns:6.6% 3.12% 8.24% 1% 25.98% 4.16% 3.12% 8.24% 1% 25.98% 4.16% 7.4%;
+		grid-template-rows:7% 8% 6.5% 4% 1% 11% 5% 4% 4% 1% 11% 5% 4.25% 4.25% 1% 11% 5% 7%; 
+	}
+	#paragraphs > great::before{
+		content:" ";
+	}
+	.gbodyy{
+		font-size:1em;
+	}
+	.gheader{
+		font-size:1.13em;
+	}
+}
+@media all and  (max-width: 1700px) and (min-width: 1201px){
+	.pnggroup{
+		max-width: 90px;
+		clear:both;
+	}
+	.gheader{
+		font-size:1.07em;
+	}
+	#paragraphs{
+		grid-template-columns:7% 3.12% 8.24% 2% 25.98% 3.16% 3.12% 8.24% 2% 25.98% 3.16% 7%;
+		grid-template-rows:7% 8% 6% 4% 1% 11% 5% 4.5% 4% 1% 11% 5% 4.5% 4% 1% 11% 5% 7%;
+	}
+	.gbodyy{
+		font-size:.93em;
+	}
+}
+@media all and (max-width: 1200px) and (min-width: 1001px){
+	.gheader{
+		
+	}
+	#paragraphs{
+		grid-template-columns:7% 3.12% 8.24% 2% 25.98% 3.16% 3.12% 8.24% 2% 25.98% 3.16% 7%;
+	}
+	.gbodyy{
+		
+	}
+	.pnggroup{
+		max-width: 90px;
+		clear:both;
+	}
+}	
+@media all and (max-width: 1000px) and (min-width: 931px){
+	.gheader{
+		
+	}
+	#paragraphs{
+		grid-template-columns:7% 3.12% 8.24% 2% 25.98% 3.16% 3.12% 8.24% 2% 25.98% 3.16% 7%;
+	}
+	.gbodyy{
+		
+	}
+	.pnggroup{
+		
+		clear:both;
+	}
+}	
+@media all and (max-width: 930px) and (min-width: 701px){
+	.gheader{
+	}
+	.gbodyy{
+	}
+}
+@media all and (max-width: 700px){
+	.gheader{
+		font-size: .9em;
+		min-width: 168px;
+	}
+	#paragraphs{
+		grid-template-columns:6% 3.12% 8.24% 2% 25.98% 4.16% 3.12% 8.24% 2% 25.98% 3.16% 7%;
+	}
+	.gbodyy{
+		font-size: .85em;
+		min-width: 168px;
+	}
+}
+/*For when the screen gets too vertically small*/
+@media all and (max-width:753px) and (max-height: 722px){
+}
+
+
+
+#infographics{
+	max-height: 100vw;
+	display:grid;
+	grid-template-columns:3% 38% 4% 10% 4% 38% 3%;
+	grid-template-rows:76% 7% 17%;
+	grid-template-areas:
+		". tourist tourist . resident resident ."
+		". signupT buttoni buttoni buttoni signupR ."
+		". . buttoni buttoni buttoni . .";
+	background-image: url("hillygray.jpg");
+	background-size:cover;
+	padding:0px;
+	z-index: 2;
+}
+#infographics > * {
+	padding: 6px;
+}
+#infographics > tourist{
+	grid-area: tourist;
+	margin: 0 auto;
+	padding-top: 11px;
+}
+#infographics > resident{
+	grid-area: resident;
+	margin: 0 auto;
+	padding-top: 11px;
+}
+#infographics > buttoni {
+	grid-area: buttoni;
+	margin:0 auto;
+}
+#infographics > signupT {
+	grid-area: signupT;
+	margin:0 auto;
+}
+#infographics >signupR {
+	grid-area: signupR;
+	margin: 0 auto;
+}
+
+#testimonialsdiv{
+	display: grid;
+  
+    grid-template-columns: 8% 39% 6% 39% 8% ;
+    grid-template-rows: 3% 7% 8% 20% 5% 20% 5% 20% 2%;
+    grid-template-areas:
+    ". . . . ."
+    ". ttitle ttitle ttitle ."
+    ". . . . ."
+    ". tmonial1 . tmonial2 ."
+    ". . . . ."
+    ". tmonial3 . tmonial4 ."
+    ". . . . ."
+    ". tmonial5 . tmonial6 ."
+    ". . . . ."
+
+    ;
+	background-color:white;
+	border: 0px;
+	padding:0;
+	margin:0;
+	z-index: 2;
+
+	
+}
+#testimonialtext{
+/*	color: rgb( 216, 208, 208);*/
+	grid-area:ttitle;
+	color:rgb(2, 5, 2);
+	font-weight: 600;
+	font-size: 3vmax;
+	font-family: 'Varela Round', sans-serif;
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	        user-select:none;
+	cursor:default;
+	margin-top: 43px;
+	margin-bottom: 23px;
+	text-align:center;
+
+}
+
+tmonial1{
+	grid-area: tmonial1;
+	padding: 0;
+	margin:0;
+}
+tmonial2{
+	grid-area:tmonial2;
+	padding: 0;
+	margin:0;
+}
+tmonial3{
+	grid-area:tmonial3;
+	padding: 0;
+	margin:0;
+}
+tmonial4{
+	grid-area:tmonial4;
+	padding: 0;
+	margin:0;
+}
+tmonial5{
+	grid-area:tmonial5;
+	padding: 0;
+	margin:0;
+}
+tmonial6{
+	grid-area:tmonial6;
+	padding: 0;
+	margin:0;
+}
+#tmonial1{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+#tmonial2{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+#tmonial3{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+#tmonial4{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+#tmonial5{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+#tmonial6{
+	max-width: 100%;
+	max-height:210px; 
+	height: auto;
+	padding: 0;
+	margin-left: 50%;
+	margin-right: 50%;
+	-webkit-transform:translateX(-50%);
+	    -ms-transform:translateX(-50%);
+	        transform:translateX(-50%);
+}
+
+
+
+
+/*End of awesome css transition code (( Thanks to qnimate.com for the tutorial that helped create this awesome slideshow. Find more here http://qnimate.com/creating-a-slider-using-html-and-css-only/.
+	It's MIT liscenced. )) */
+
+#ContactUsDiv{
+	font-family: 'Varela Round', sans-serif;
+	text-align: center;
+	font-weight: 600;
+	height:110%;
+	/*filter:invert(1);*/
+	background-color:#FFB155;
+	width:100%;
+	-webkit-transition:.5s;
+	-o-transition:.5s;
+	transition:.5s;
+}
+#ContactUsDiv:hover{
+	-webkit-filter:invert(1);
+	        filter:invert(1);
+}
+#ContactUsDiv a{
+	color:#66023C;
+	font-weight: 300;
+}
+#ContactUsDiv a:hover, #ContactUsDiv a:focus{
+	color:#9370DB;
+	font-weight: 600;
+}
+#contactusdivcenterer{
+	padding:40px;
+}
+
+
+
